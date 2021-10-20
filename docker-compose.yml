@@ -1,0 +1,14 @@
+version: "2"
+services:
+  sms2tweet:
+    build: ./
+    expose:
+      - "8090"
+    environment:
+      - TWITTER_CONSUMER_KEY=$TWITTER_CONSUMER_KEY
+      - TWITTER_CONSUMER_SECRET=$TWITTER_CONSUMER_SECRET
+      - TWITTER_ACCESS_TOKEN=$TWITTER_ACCESS_TOKEN
+      - TWITTER_ACCESS_SECRET=$TWITTER_ACCESS_SECRET
+      - TWILIO_AUTH_TOKEN=$TWILIO_AUTH_TOKEN
+      - URL=$URL
+      - NUMBER=$NUMBER
